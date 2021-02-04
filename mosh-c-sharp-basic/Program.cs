@@ -2,14 +2,6 @@
 
 namespace mosh_c_sharp_basic
 {
-    //Enum: collection of constants; ints unless cast otherwise ex. : byte
-    public enum ShippingMethod
-    {
-        RegularAirMail = 1,
-        RegisterAirMail = 2,
-        Express = 3,
-    }
-
     class Program
     {
         static void Main(string[] args)
@@ -188,6 +180,40 @@ To go to a new line.";
             //Conditional operator
             float cost = (isGoldCustomer) ? 19.95f : 29.95f;
             Console.WriteLine("Cost: $" + cost);
+
+            //Switch
+            var season = Season.Fall;
+
+            switch (season)
+            {
+                case Season.Spring:
+                    Console.WriteLine("Flowers are blooming!");
+                        break;
+                case Season.Summer:
+                    Console.WriteLine("Time to BBQ and go for a swim!");
+                        break;
+                case Season.Fall:
+                    Console.WriteLine("All the leaves are brown..");
+                        break;
+                default:
+                    Console.WriteLine("Old man winter is upon us.");
+                        break;
+            }
+
+            switch (season)
+            {
+                case Season.Fall:
+                case Season.Winter:
+                    Console.WriteLine("Don't forget your coat and hat!");
+                    break;
+                case Season.Spring:
+                    Console.WriteLine("Might need an umbrella.");
+                    break;
+                default:
+                    Console.WriteLine("Grab some sunscreen!");
+                    break;
+            }
+            
         }
 
         public static void MakeOld(Person person)
