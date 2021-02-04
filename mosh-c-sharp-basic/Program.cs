@@ -213,7 +213,11 @@ To go to a new line.";
                     Console.WriteLine("Grab some sunscreen!");
                     break;
             }
-            
+
+            Conditionals.Exercise1();
+            Conditionals.Exercise2();
+            Conditionals.Exercise3();
+            Conditionals.Exercise4();
         }
 
         public static void MakeOld(Person person)
