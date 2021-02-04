@@ -14,6 +14,7 @@ namespace mosh_c_sharp_basic
     {
         static void Main(string[] args)
         {
+            Console.Clear();
             Console.WriteLine("Hello World!");
 
             //primitive types
@@ -104,22 +105,20 @@ namespace mosh_c_sharp_basic
             Important! When setting a variable that is non-primitive,
             it is a reference type and is a class (vs structure).
             The allocated memory address will hold the actual values.
-            The value stored for the variable will be an allocated memory address.
+            The value stored for the variable will be said allocated memory address.
             So if you set a non-primitive (reference type) variable to equal another,
             they will hold the same value; the allocated memory address.
-            Therefore if you change the the contents within that address, it
+            Therefore if you change the contents within that address, it
             changes it for both variables!
             */
             var numbers = new int[3] { 1, 2, 3 };
             var moreNumbers = numbers;
             
             /*
-             This will change the value for index position 0 to zero in 
+             This will change the value of index position 0 to zero for 
              both moreNumbers and numbers!
              */ 
             moreNumbers[0] = 0;
-
-            
 
             //Strings
             var marineBase = "Camp Pendleton";
@@ -158,7 +157,37 @@ To go to a new line.";
             var anotherMethod = "Express";
             var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), anotherMethod);
 
+            //if-else
+            int hour = 10;
 
+            if(hour > 0 && hour < 12)
+            {
+                Console.WriteLine("Buenos dias");
+            }
+            else if(hour > 12 && hour < 18)
+            {
+                Console.WriteLine("Buenas tardes");
+            }else
+            {
+                Console.WriteLine("Buenas noches");
+            }
+
+            bool isGoldCustomer = true;
+            float price;
+
+            if (isGoldCustomer)
+            {
+                price = 19.95f;
+            }
+            else
+            {
+                price = 29.95f;
+            }
+            Console.WriteLine("Price: $" + price);
+
+            //Conditional operator
+            float cost = (isGoldCustomer) ? 19.95f : 29.95f;
+            Console.WriteLine("Cost: $" + cost);
         }
 
         public static void MakeOld(Person person)
