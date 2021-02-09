@@ -349,7 +349,8 @@ namespace mosh_c_sharp_basic
             ////Clear; removes everything from the list
             //nums2.Clear();
 
-            ArrayExercise1();
+            //ArrayExercise1();
+            ArrayExercise2();
 
         }
 
@@ -392,7 +393,22 @@ namespace mosh_c_sharp_basic
             Console.WriteLine(message);
         }
 
-        
+        public static void ArrayExercise2()
+        {
+            Console.WriteLine("What is your name?");
+            var name = Console.ReadLine();
+            var nameArray = new char[name.Length];
+            var j = 0;
+
+            for(int i = name.Length -1; i >= 0; i--)
+            {
+                    nameArray[j] = name[i];
+                j++;
+            }
+
+            var reversed = new string(nameArray);
+            Console.WriteLine(reversed);
+        }
 
         public static void MakeOld(Person person)
         {
