@@ -350,8 +350,8 @@ namespace mosh_c_sharp_basic
             //nums2.Clear();
 
             //ArrayExercise1();
-            ArrayExercise2();
-
+            //ArrayExercise2();
+            ArrayExercise3();
         }
 
        
@@ -402,13 +402,53 @@ namespace mosh_c_sharp_basic
 
             for(int i = name.Length -1; i >= 0; i--)
             {
-                    nameArray[j] = name[i];
+                nameArray[j] = name[i];
                 j++;
             }
 
             var reversed = new string(nameArray);
             Console.WriteLine(reversed);
         }
+
+        public static void ArrayExercise3()
+        {
+            var numbers = new int[5];
+            var count = 0;
+            int choice;
+
+            while (count < 5)
+            {
+                Console.WriteLine("Enter a number: ");
+                var input = Console.ReadLine();
+                if (String.IsNullOrEmpty(input))
+                {
+                    Console.WriteLine("Invalid input");
+                }
+                else
+                {
+
+                    choice = Convert.ToInt32(input);
+
+                    if (Array.IndexOf(numbers, choice) == -1)
+                    {
+                        numbers[count] = choice;
+                        count++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input");
+                    }
+                }
+            }
+
+            Array.Sort(numbers);
+
+            for (var i = 0; i < numbers.Length; i++)
+            {
+                Console.Write(numbers[i] + " ");
+            }
+        }
+
 
         public static void MakeOld(Person person)
         {
