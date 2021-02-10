@@ -351,7 +351,8 @@ namespace mosh_c_sharp_basic
 
             //ArrayExercise1();
             //ArrayExercise2();
-            ArrayExercise3();
+            //ArrayExercise3();
+            ArrayExercise4();
         }
 
        
@@ -449,6 +450,39 @@ namespace mosh_c_sharp_basic
             }
         }
 
+        public static void ArrayExercise4()
+        {
+            var numbers = new List<int>();
+            var uniqueNums = new List<int>();
+            var carryOn = true;
+
+            while (carryOn)
+            {
+                Console.WriteLine("Enter a number or Quit: ");
+                var input = Console.ReadLine();
+                if (input.Equals("Quit"))
+                {
+                    carryOn = false; ;
+                }
+                else
+                {
+                    numbers.Add(Convert.ToInt32(input));
+                }
+            }
+
+            for (var i = 0; i < numbers.Count; i++)
+            {
+                if (uniqueNums.IndexOf(numbers[i]) == -1)
+                {
+                    uniqueNums.Add(numbers[i]);
+                }
+            }
+
+            for (var j = 0; j < uniqueNums.Count; j++)
+            {
+                Console.Write(uniqueNums[j] + " ");
+            }
+        }
 
         public static void MakeOld(Person person)
         {
