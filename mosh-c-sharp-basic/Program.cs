@@ -387,6 +387,23 @@ namespace mosh_c_sharp_basic
             ////To String
             //Console.WriteLine("To String: " + timeSpan.ToString());
 
+            //String Methods
+            var fullName = "That Guy ";
+            Console.WriteLine("Trimmed: " + fullName.Trim());
+            Console.WriteLine("To Upper and trimmed: " + fullName.Trim().ToUpper());
+
+            var index = fullName.IndexOf(" ");
+            var firstName = fullName.Substring(0, index);
+            var lastName = fullName.Substring(index + 1);
+
+            var names = fullName.Split(' ');
+            var first = names[0];
+            var last = names[1];
+
+            var trimmedName = fullName.Replace(" ", "");
+            Console.WriteLine(trimmedName);
+
+
 
         }
 
