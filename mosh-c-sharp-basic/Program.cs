@@ -353,7 +353,41 @@ namespace mosh_c_sharp_basic
             //ArrayExercise2();
             //ArrayExercise3();
             //ArrayExercise4();
-            ArrayExercise5();
+            //ArrayExercise5();
+
+            //Dates and Times
+            //Creating
+            //var dateTime = new DateTime(2021, 02, 09);
+            //var now = DateTime.Now;
+            //Console.WriteLine(now.Hour);
+            //var today = DateTime.Today;
+
+            //var tomorrow = now.AddDays(1);
+
+            //Console.WriteLine(now.ToLongDateString());
+            //Console.WriteLine(now.ToShortDateString());
+            //Console.WriteLine(now.ToString());
+            //Console.WriteLine(now.ToString("g"));
+
+            //var timeSpan = new TimeSpan(1, 2, 3);
+            //var diffTime = TimeSpan.FromHours(1);
+            //var start = DateTime.Now;
+            //var end = DateTime.Now.AddMinutes(2);
+            //var duration = end - start;
+            //Console.WriteLine("Duration: " + duration);
+
+            ////Properties
+            //Console.WriteLine("Minutes: " + timeSpan.Minutes);
+            //Console.WriteLine("Total minutes: " + timeSpan.TotalMinutes);
+
+            ////Add - Subtract
+            //Console.WriteLine("Add: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
+            //Console.WriteLine("Subtract: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
+
+            ////To String
+            //Console.WriteLine("To String: " + timeSpan.ToString());
+
+
         }
 
        
