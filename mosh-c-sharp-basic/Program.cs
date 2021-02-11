@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace mosh_c_sharp_basic
@@ -389,53 +390,60 @@ namespace mosh_c_sharp_basic
             //Console.WriteLine("To String: " + timeSpan.ToString());
 
             //String Methods
-            var fullName = "That Guy ";
-            Console.WriteLine("Trimmed: " + fullName.Trim());
-            Console.WriteLine("To Upper and trimmed: " + fullName.Trim().ToUpper());
+            //var fullName = "That Guy ";
+            //Console.WriteLine("Trimmed: " + fullName.Trim());
+            //Console.WriteLine("To Upper and trimmed: " + fullName.Trim().ToUpper());
 
-            var index = fullName.IndexOf(" ");
-            var firstName = fullName.Substring(0, index);
-            var lastName = fullName.Substring(index + 1);
+            //var index = fullName.IndexOf(" ");
+            //var firstName = fullName.Substring(0, index);
+            //var lastName = fullName.Substring(index + 1);
 
-            var names = fullName.Split(' ');
-            var first = names[0];
-            var last = names[1];
+            //var names = fullName.Split(' ');
+            //var first = names[0];
+            //var last = names[1];
 
-            var trimmedName = fullName.Replace(" ", "");
-            Console.WriteLine(trimmedName);
+            //var trimmedName = fullName.Replace(" ", "");
+            //Console.WriteLine(trimmedName);
 
-            float price = 29.95f;
-            Console.WriteLine(price.ToString("C2"));
+            //float price = 29.95f;
+            //Console.WriteLine(price.ToString("C2"));
 
-            //Summarising text
-            var sentence = "Yadda, yadda, yadda and it goes on and on and on.";
-            var summary = StringsText.SummarizeText(sentence);
-            Console.WriteLine(summary);
+            ////Summarising text
+            //var sentence = "Yadda, yadda, yadda and it goes on and on and on.";
+            //var summary = StringsText.SummarizeText(sentence);
+            //Console.WriteLine(summary);
 
-            //String Builder
-            var builder = new StringBuilder();
-            builder.Append('-', 10);
-            builder.AppendLine();
-            builder.Append("Header");
-            builder.AppendLine();
-            builder.Append('-', 10);
-            Console.WriteLine(builder);
+            ////String Builder
+            //var builder = new StringBuilder();
+            //builder.Append('-', 10);
+            //builder.AppendLine();
+            //builder.Append("Header");
+            //builder.AppendLine();
+            //builder.Append('-', 10);
+            //Console.WriteLine(builder);
 
-            builder.Replace('-', '+');
-            builder.Remove(0, 10); //index: 0, for 10 chars
-            builder.Insert(0, new string('*', 10));
-            Console.WriteLine(builder);
+            //builder.Replace('-', '+');
+            //builder.Remove(0, 10); //index: 0, for 10 chars
+            //builder.Insert(0, new string('*', 10));
+            //Console.WriteLine(builder);
 
-            Console.WriteLine(builder[0]);
+            //Console.WriteLine(builder[0]);
 
-            var cleanerBuild = new StringBuilder();
-            cleanerBuild
-                .Append('-', 10)
-                .AppendLine()
-                .Append("Header")
-                .AppendLine()
-                .Append('-', 10);
-            Console.WriteLine(cleanerBuild);
+            //var cleanerBuild = new StringBuilder();
+            //cleanerBuild
+            //    .Append('-', 10)
+            //    .AppendLine()
+            //    .Append("Header")
+            //    .AppendLine()
+            //    .Append('-', 10);
+            //Console.WriteLine(cleanerBuild);
+
+            //System.IO
+            //File.Copy("from where", "to where");
+            //File.Delete("file path");
+            //if(File.Exists("file path")) {
+            //    //some code
+            //}
 
 
         }
